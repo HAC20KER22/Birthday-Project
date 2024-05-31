@@ -1,0 +1,232 @@
+html
+{
+    margin: 0;
+    height: 90%;
+}
+body
+{
+    width: 99%;
+    height: 100%;
+    background-color: #F4EEFF;
+    color: #424874 ;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.intro-text
+{
+    font-size: 100px;
+}
+.hb-text-1 h1
+{
+    margin-top: 50px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+}
+
+img
+{
+    position: absolute;
+}
+
+.confetti1
+{
+    left: 15%;
+    width: 250px;
+    top: 37%;
+}
+
+.confetti2
+{
+    right: 15%;
+    width: 275px;
+    top: 37%;
+}
+.main-body
+{
+    display: flex;
+    flex-direction: column;
+    border: none;
+    align-items: center;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.hb-text-2 {
+    position: relative;
+  }
+.hb-text-2 span {
+    position: relative;
+    display: inline-block;
+    font-size: 75px;
+    color: #424874;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+}
+
+.addressing-person
+{
+    background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  text-transform: uppercase;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;    
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  margin-top: 10px;
+  font-size: 125px;
+  margin-bottom: 20px;
+}
+
+#choices
+{
+    border: solid;
+    border-color: #AA96DA;
+    border-width: 2px;
+    min-width: 300px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 25px;
+    border-radius: 20px;
+    color: #A6B1E1;
+}
+
+
+
+.submit-button
+{
+    border: solid;
+    border-color: #AA96DA;
+    border-width: 2px;
+    width: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 22px;
+    border-radius: 20px;
+    color: #A6B1E1;
+    background-color: white;
+}
+
+.submit-button:active
+{
+    background-color: rgb(0, 255, 0);
+    color: #231557;
+}
+
+.list-item
+{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+}
+
+.item
+{
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 200px;
+    color: #44107a;
+}
+
+.cb
+{
+    border: none;
+    background-color: white;
+    border-radius: 200px;
+    height: 20px;
+}
+
+.spin
+{
+    color: white;
+    padding: 20px;
+    height: 75px;
+    border: none;
+    border-radius: 50px;
+    background-image: url("bb.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.gift
+{
+    animation-name: spinning;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+}
+
+.final-gift
+{
+    animation: spins;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    color: #231557;
+    background-color: #fff;
+}
+
+@keyframes spins {
+    from{
+        width: 1px;
+    }
+    to{
+        transform: rotate(360deg);
+        width: fit-content;
+    }
+}
+
+
+@keyframes spinning {
+    from{
+        width: 1px;
+    }
+    to{
+        transform: rotate(360deg);
+        width: 700px;
+    }
+}
+
+
+
+
+@keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+}
+
+@keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+}
+
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+
+@keyframes blink-caret {
+   from, to { border-color: transparent }
+   50% { border-color: orange }
+}
